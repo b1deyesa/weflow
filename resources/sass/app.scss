@@ -1,0 +1,125 @@
+@import "bootstrap/scss/bootstrap";
+@import 'tailwindcss';
+
+body {
+    font-size: .9em;
+}
+
+[x-cloak] { display: none !important; }
+
+.dataTables_filter {
+    margin-bottom: 1rem;
+    label {
+        font-size: 0;
+    }
+    input {
+        padding: 0.5rem 1rem;
+        font-size: .78rem;
+        width: 20em;
+        background: white;
+    }
+}
+
+.dataTables_paginate {
+    margin-top: 1rem;
+    font-size: .88em;
+}
+
+.border-dashed {
+    border-style: dashed;
+}
+
+.select2-selection {
+    font-size: 0.9em !important; /* small */
+}
+
+.team-card {
+    position: relative;
+    overflow: hidden;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: .3em;
+        height: 100%;
+        li {
+            background: linear-gradient(90deg, #22222298, #22222290, #222222AA);
+            color: white;
+            width: fit-content;
+            padding: 0 .5em;
+            border-radius: 2px;
+            border: 1px solid #003d6e07;
+            font-size: .9em;
+        }
+    }
+    &.team-card-last > img {
+        left: -25% !important;
+        right: 25% !important;
+    }
+    > img {
+        position: absolute;
+        object-fit: cover;
+        object-position: center;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 25%;
+        width: 100%;
+        height: 100%;
+        rotate: 0;
+        z-index: -1;
+        transform: scale(1);
+    }
+    .logo {
+        height: 50px;
+    }
+    .team-name {
+        background: linear-gradient(90deg, #003d6eAA, #003d6e87, #003d6e99);
+        font-size: 1em;
+        padding: .3em .8em;
+        margin: 0;
+        border-radius: 2em;
+        color: white;
+        font-weight: bold;
+    }
+    .score {
+        background: white;
+        width: 60px;
+        padding: .3em;
+        font-size: 1.6em;
+        text-align: center;
+        border-radius: 10px;
+        border: 1px solid #01101c2f;
+    }
+    &.team-card-last::after {
+        background: linear-gradient(270deg, #FFF 40%, #FFFFFF88, transparent) !important;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(70deg, #FFF 40%, #FFFFFF88, transparent);
+        z-index: -1;
+    }
+}
+
+/* Untuk Chrome, Safari, Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Untuk Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.disabled-link {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.2 !important;
+}
