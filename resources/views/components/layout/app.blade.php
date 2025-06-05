@@ -11,7 +11,9 @@
     <link rel="icon" href="img/">
 
     <!-- CSS Linked -->
-    @vite('resources/sass/app.scss')
+    {{-- @vite('resources/sass/app.scss') --}}
+    <link href="{{ asset('build/assets/app-D2iCsBzf.css')}}" rel="stylesheet">
+    <script src="{{ asset('build/assets/app-T1DpEqax.js') }}"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
