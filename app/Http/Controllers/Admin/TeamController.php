@@ -57,7 +57,7 @@ class TeamController extends Controller
         $customers = is_array($request->customer_id) ? array_keys($request->customer_id) : [];
         $team->customers()->sync($customers);
 
-        $employees = is_array($request->employee_id) ? $request->employee_id : [];
+        $employees = $request->employee_id ? $request->employee_id : [];
         $team->employees()->sync($employees);
         
         return redirect(route('admin.team.index'))->with('success','Success add team');
@@ -108,7 +108,7 @@ class TeamController extends Controller
         $customers = is_array($request->customer_id) ? array_keys($request->customer_id) : [];
         $team->customers()->sync($customers);
 
-        $employees = is_array($request->employee_id) ? $request->employee_id : [];
+        $employees = $request->employee_id ? $request->employee_id : [];
         $team->employees()->sync($employees);
         
         return redirect(route('admin.team.index'))->with('success','Success update team');
