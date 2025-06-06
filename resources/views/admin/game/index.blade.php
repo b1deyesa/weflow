@@ -6,9 +6,12 @@
             <a href="{{ route('admin.team.create') }}" class="btn btn-outline-secondary btn-sm">Add Game</a>
         </div>
     </div>
+    @if ($games->count() > 0)
+        <small class="d-flex mt-5" style="margin-bottom: -20px">Sistem akan melanjutkan ke ronde berikutnya secara otomatis setelah seluruh skor pada ronde saat ini terisi dan Anda menekan tombol 'Simpan'</small>
+    @endif
     <form action="{{ route('admin.games.update-scores') }}" method="POST">
         @csrf
-        <div class="mt-5">
+        <div class="">
             @php
             $groupedGames = $games->sortBy('game_time')->groupBy('round');
         @endphp
