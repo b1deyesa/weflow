@@ -22,7 +22,7 @@ class LoginController extends Controller
         
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('admin.index');
+            return redirect()->route('admin.employee.index');
         }
         
         return redirect()->route('auth.login.index')->with('error', 'Email or Password is wrong');
