@@ -29,6 +29,7 @@
 <script>
     $(document).ready(function() {
         $('#{{ $id }}').DataTable({
+            paging: false,
             info: false,
             lengthChange: false,
             ordering: false
