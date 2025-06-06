@@ -52,8 +52,8 @@
                     <span class="fw-bold text-light opacity-50 mt-4 mb-2" style="font-size: .8em">Reports</span>
                     <a href="" class="text-decoration-none disabled-link text-light py-1 {{ request()->routeIs('admin..*') ? 'active' : '' }}"><i class="bi bi-cash-coin me-2"></i>Monthly Payroll</a>
                     <a href="" class="text-decoration-none disabled-link text-light py-1 {{ request()->routeIs('admin..*') ? 'active' : '' }}"><i class="bi bi-currency-dollar me-2"></i>Course Payments</a>
-                    <hr class="border-light mt-5">
-                    <a href="{{ route('admin.setting.user.index') }}" class="text-decoration-none text-light py-1 opacity-50 {{ request()->routeIs('admin.setting.user.*') ? 'active' : '' }} mt-1"><i class="bi bi-gear-fill me-2"></i>Settings</a>
+                    {{-- <hr class="border-light mt-5">
+                    <a href="{{ route('admin.setting.user.index') }}" class="text-decoration-none text-light py-1 opacity-50 {{ request()->routeIs('admin.setting.user.*') ? 'active' : '' }} mt-1"><i class="bi bi-gear-fill me-2"></i>Settings</a> --}}
                 </div>
             </div>
         </div>
