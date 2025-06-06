@@ -10,7 +10,7 @@
         @csrf
         <div class="mt-5">
             @php
-            $groupedGames = $games->groupBy('round');
+            $groupedGames = $games->sortBy('game_time')->groupBy('round');
         @endphp
         
         @foreach ($groupedGames as $round => $gamesInRound)
