@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center justify-content-center p-5 vh-100">
                     <div class="d-flex flex-column gap-1 w-100" style="max-width: 350px">
-                        <h5 class="fs-4 fw-bold mb-4">Welcome Back!</h5>
+                        <h5 class="fs-4 fw-bold mb-4">To WeFlow</h5>
                         @if(session()->has('error'))
                             <div class="alert alert-danger" role="alert">
                                 {{ session('error') }}
@@ -14,7 +14,7 @@
                             @csrf
                             <x-input label="Email Address" type="email" name="email" />
                             <x-input label="Password" type="password" name="password" />
-                            <div class="row">
+                            {{-- <div class="row">
                                 <div class="col-6">
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="remember">
@@ -24,8 +24,8 @@
                                 <div class="col-6 text-end">
                                     <a href="">Forget Password?</a>
                                 </div>
-                            </div>
-                            <x-button type="submit" class="w-100">Login</x-button>
+                            </div> --}}
+                            <x-button type="submit" class="btn-dark w-100">Login</x-button>
                           </form>
                     </div>
                 </div>
