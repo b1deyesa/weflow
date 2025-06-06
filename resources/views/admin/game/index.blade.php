@@ -69,10 +69,12 @@
                 </div>
             @endforeach
         @endforeach
+        </div>
         
-        </div>
-        <div class="d-flex justify-content-end w-100 mt-4">
-            <button type="submit" class="btn btn-primary mt-4">Save Scores</button>
-        </div>
+        @if ($games->count() > 0)
+            <div class="d-flex justify-content-end w-100 mt-4">
+                <button type="submit" class="btn btn-primary mt-4">Save Scores</button>
+            </div>
+        @endif
     </form>
 </x-layout.admin>
