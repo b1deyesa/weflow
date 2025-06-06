@@ -25,7 +25,7 @@
                                 @if ($game?->teamHome?->logo)
                                     <img class="logo" src="{{ asset('storage/Team/'. $game?->teamHome?->logo) }}">
                                 @endif
-                                <h6 class="team-name">{{ $game?->teamHome?->name ?? '-' }}</h6>
+                                <h6 class="team-name">{{ $game?->teamHome?->name ?? 'Unavailable' }}</h6>
                             </div>
                             @if ($game?->teamHome)
                                 <input 
@@ -59,7 +59,7 @@
                                 >
                             @endif
                             <div class="d-flex align-items-center gap-3">
-                                <h6 class="team-name">{{ $game?->teamAway?->name ?? '-' }}</h6>
+                                <h6 class="team-name">{{ $game?->teamAway?->name ?? 'Unavailable' }}</h6>
                                 @if ($game?->teamAway?->logo)
                                     <img class="logo" src="{{ asset('storage/Team/'. $game?->teamAway?->logo) }}">
                                 @endif
