@@ -105,7 +105,8 @@ class TeamController extends Controller
             'name' => $request->name,
         ]);
         
-        $customers = is_array($request->customer_id) ? array_keys($request->customer_id) : [];
+        
+        $customers = $request->customer_id ? array_keys($request->customer_id) : [];
         $team->customers()->sync($customers);
 
         $employees = $request->employee_id ? $request->employee_id : [];
